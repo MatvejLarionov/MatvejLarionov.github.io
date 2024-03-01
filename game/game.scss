@@ -1,0 +1,121 @@
+@font-face {
+    font-family: Lemon;
+    src: url('../public/fonts/Lemon/Lemon-Regular.ttf');
+}
+:root{
+    --n:0;
+    --m:0;
+    --cellSize:30px;
+
+}
+.gameContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.game{
+    margin: 0 0 0 35%;
+
+    border-radius: 25px;
+    border: 10px double brown;
+
+    width: calc(var(--n)*var(--cellSize));
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(var(--n),var(--cellSize));
+    grid-auto-rows: var(--cellSize);
+}
+.cell{
+    width: 100%;
+    height: 100%;
+    /* width: 20px;
+    height: 20px; */
+    border: 1px solid black;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100px;
+    height: 150px;
+}
+.nav button{
+    transition: 0.5s;
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+    font-family: lemon;
+    font-size: 17px;
+    font-weight: 600;
+}
+.nav button:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+.nav button:active{
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+.btnStop{
+    background-color: red;
+}
+.btnRestart{
+    background-color: blue;
+    color: white;
+}
+.count{
+    min-width: 50px;
+    height: 30px;
+    text-align: center;
+    color: yellow;
+    background-color: red;
+    border: 5px solid purple;
+    border-radius: 25px;
+}
+.record{
+    min-width: 50px;
+    height: 30px;
+    text-align: center;
+    color: yellow;
+    background-color: red;
+    border: 5px solid purple;
+    border-radius: 25px;
+}
+
+.navControl{
+    width: 1440px;
+    display: flex;
+    justify-content: space-around;
+}
+.navControl button{
+    transition: 0.5s;
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    font-family: lemon;
+    font-size: 17px;
+    font-weight: 600;
+}
+.navControl button:active{
+    filter: invert(100%);
+    transition: 0.01s;
+}
+.btnRight{
+    background-image: url('../public/images/btnRight.jpg');
+    background-size: 100px;
+}
+.btnLeft{
+    background-image: url('../public/images/btnLeft.jpg');
+    background-size: 100px;
+}
+.btnTurnClockwise{
+    background-image: url('../public/images/btnTurnClockwise.jpg');
+    background-size: 100px;
+}
+.btnTurnCounterclockwise{
+    background-image: url('../public/images/btnTurnCounterclockwise.jpg');
+    background-size: 100px;
+}
